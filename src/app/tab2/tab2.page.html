@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Zoo ok
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-item *ngFor="let animal of animales">
+	  <ion-label>{{ animal.nombre }}</ion-label>
+	</ion-item> 
+
+  <!-- add to homescreen for ios 
+
+    <ion-card class="welcome-card" *ngFor="let animal of animales">
+      <ion-img src="{{ animal.img }}"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>{{ animal.nombre }}</ion-card-subtitle>
+        <ion-card-title>Los {{ animales.nombre }} de raza {{ animal.raza }} comen {{ animal.comida }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ animal.descripcion }}</p>
+      </ion-card-content>
+    </ion-card>
+-->
+
+</ion-content>
