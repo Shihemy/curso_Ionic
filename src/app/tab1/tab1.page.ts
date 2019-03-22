@@ -8,13 +8,18 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-	
+	subs:any;
+	id:any;
+	list_mediocs:any;
 	constructor(private animales: AnimalesService, 
 				private navCtrl: NavController ){
 
 	}
 
-	medicos(){
-		this.navCtrl.navigateForward('/medicos');
+	medicos(id){
+		console.log("Para moverme de pagina");
+		let converToString=JSON.stringify(id);
+
+		this.navCtrl.navigateForward(['/medicos',{queryParams:id}]);
 	}
 }
